@@ -21,9 +21,9 @@ public class FeaturePoints : MonoBehaviour
         rectTransform.position = screenPoint;
 
         var viewportPoint = Camera.main.WorldToViewportPoint(targetTransform.position);
-        var distanceFromCenter = Vector2.Distance(viewportPoint, Vector2.one);
-
-        var show = distanceFromCenter < 0.85f;
+        var distanceFromCenter = Vector2.Distance(viewportPoint, Vector2.zero);
+        // Debug.Log($"{gameObject.name} is at {distanceFromCenter}");
+        var show = distanceFromCenter > 0.2f;
         image.enabled = show;
     }
 }
