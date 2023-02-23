@@ -3,7 +3,12 @@ guid: 25ef93ab2760b094ab4a1835bf846ab3
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Colour_Brain_Texture
+    second: {fileID: 2100000, guid: 8684230ee3c5ed14e8b0b23d56b9a39c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
