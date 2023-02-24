@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 
 public class FeaturePoints : MonoBehaviour
@@ -8,6 +9,9 @@ public class FeaturePoints : MonoBehaviour
     [SerializeField] private Transform targetTransform;
     private RectTransform rectTransform;
     private Image image;
+    public GameObject brain;
+    public UnitValues unitValues;
+    private bool isRotated = false;
     
     private void Awake()
     {
@@ -25,5 +29,13 @@ public class FeaturePoints : MonoBehaviour
         // Debug.Log($"{gameObject.name} is at {distanceFromCenter}");
         var show = distanceFromCenter > 0.2f;
         image.enabled = show;
+
+    }
+
+    public void FocusPart()
+    {
+        Debug.Log(unitValues.partName);
+        brain.transform.SetPositionAndRotation(brain.transform.position,Quaternion.Euler(unitValues.rotationValues));
+        Debug.Log(unitValues.description);
     }
 }
