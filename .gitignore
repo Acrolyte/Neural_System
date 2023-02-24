@@ -12,6 +12,10 @@
 
 /Packages/com.ptc.vuforia.engine-10.12.3.tgz
 
+/Packages/com.ptc.vuforia.engine-10.12.3.tgz
+
+
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
