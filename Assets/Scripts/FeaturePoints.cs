@@ -11,12 +11,12 @@ public class FeaturePoints : MonoBehaviour
     private Image image;
     public GameObject brain;
     public UnitValues unitValues;
-    private bool isRotated = false;
     
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         image = GetComponent<Image>();
+        image.enabled = false;
     }
 
     private void Update()
